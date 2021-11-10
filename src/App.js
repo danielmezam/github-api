@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-function App() {
+//PAGES
+import Home from "./pages/Home/Home";
+import Followers from "./pages/Followers/Followers";
+import UserRepos from "./pages/UserRepos/UserRepos";
+import NotFound from "./pages/NotFound/NotFound";
+//LAYOUTS
+import MainLayout from "./layout/MainLayout";
+
+//CONTEXT
+import { DarkModeProvider } from "./context/DarkModeContext";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DarkModeProvider>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <MainLayout>
+              <Route path="/" exact>
+                <Home />
+              </Route>
+            </MainLayout>
+          </Route>
+
+          <Route path="/:path/:path" exact>
+            <MainLayout>
+              <Route path="/followers/:name" exact>
+                <Followers />
+              </Route>
+
+              <Route path="/repos/:name" exact>
+                <UserRepos />
+              </Route>
+            </MainLayout>
+          </Route>
+
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </DarkModeProvider>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,11 @@
+.main-card {
+  width: 32%;
+  border-radius: 10px;
+  box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-header img {
+  border-radius: 50%;
+}
