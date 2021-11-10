@@ -1,4 +1,4 @@
-.main-card {
+.main-card-repo {
   width: 90%;
   border-radius: 10px;
   box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.2);
@@ -11,7 +11,7 @@
 }
 
 @media (min-width: 600px) {
-  .main-card {
+  .main-card-repo {
     width: 32%;
     margin: auto;
     margin-top: 10px;

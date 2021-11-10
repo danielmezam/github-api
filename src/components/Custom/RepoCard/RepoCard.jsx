@@ -1,5 +1,8 @@
 import React from "react";
 
+//Styles
+import "./RepoCard.styles.css";
+
 const RepoCard = ({ language, description, name, url }) => {
   const avatar =
     language === "HTML"
@@ -10,7 +13,7 @@ const RepoCard = ({ language, description, name, url }) => {
       ? "js"
       : "github";
   return (
-    <div className="  mt-5 mb-5 p-5 box-border m-auto bg-white main-card">
+    <div className="  mt-5 mb-5 p-5 box-border m-auto bg-white main-card-repo">
       <div className="card-header flex justify-center items-center text-center flex-col p-5">
         <img
           src={require(`../../../assets/${avatar.toString()}.png`).default}

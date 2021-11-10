@@ -5,7 +5,10 @@ import "./UsersForm.styles.css";
 
 const UsersForm = ({ handleUserName, handleSearchUser }) => {
   return (
-    <form className="w-1/2 m-auto mt-10" onSubmit={e => handleSearchUser(e)}>
+    <form
+      className=" w-4/5 md:w-1/2 m-auto mt-10"
+      onSubmit={e => handleSearchUser(e)}
+    >
       <input
         type="text"
         placeholder="User name"
