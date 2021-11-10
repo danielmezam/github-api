@@ -19,7 +19,12 @@ const UserCard = props => {
       <div className="card-header flex justify-center items-center text-center flex-col p-5">
         <img src={avatar} alt={github} className="w-24 h-24 " />
         <h2 className=" mt-5 text-main text-xl font-bold text-center ">
-          <a href={github} target="_blank" className="text-center">
+          <a
+            href={github}
+            target="_blank"
+            rel="noreferrer"
+            className="text-center"
+          >
             {github_name}
           </a>
         </h2>

@@ -27,7 +27,7 @@ const Followers = () => {
     };
 
     handleFollowers();
-  }, []);
+  }, [name]);
 
   return (
     <div className="followers-container">
@@ -40,6 +40,7 @@ const Followers = () => {
             github_name={userInfo?.login}
             name={userInfo?.name}
             public_repos={userInfo?.public_repos}
+            key={userInfo?.id}
           />
         ))}
       </FlexboxWrapper>

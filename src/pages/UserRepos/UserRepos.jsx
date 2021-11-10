@@ -23,7 +23,7 @@ const UserRepos = () => {
     };
 
     handleReposByUser();
-  }, []);
+  }, [name]);
 
   return (
     <div>

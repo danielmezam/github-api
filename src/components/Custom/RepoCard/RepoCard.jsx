@@ -9,7 +9,6 @@ const RepoCard = ({ language, description, name, url }) => {
       : language === "JavaScript"
       ? "js"
       : "github";
-  console.log(language);
   return (
     <div className="  mt-5 mb-5 p-5 box-border m-auto bg-white main-card">
       <div className="card-header flex justify-center items-center text-center flex-col p-5">
@@ -22,7 +21,7 @@ const RepoCard = ({ language, description, name, url }) => {
         <p className="text-gray text-bold mt-2">{name ? name : null}</p>
       </div>
       <button className="w-full px-5 py-2 bg-blue text-white">
-        <a href={url} target="_blank">
+        <a href={url} target="_blank" rel="noreferrer">
           More
         </a>
       </button>

@@ -8,7 +8,7 @@ const Checkbox = ({ handleDarkMode, darkMode }) => {
     <div className="flex flex-col justify-center items-center">
       <h6 className={`${darkMode ? "text-white" : "text-black"}`}>Dark Mode</h6>
       <input type="checkbox" id="switch" onChange={handleDarkMode} />
-      <label for="switch" className={`${darkMode ? "dark-input" : null}`}>
+      <label htmlFor="switch" className={`${darkMode ? "dark-input" : null}`}>
         Toggle
       </label>
     </div>
